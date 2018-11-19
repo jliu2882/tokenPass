@@ -29,4 +29,20 @@ public class tokenPass {
         }
         return result;
     }
+
+    public void nextPlayer(){
+        currentPlayer++;
+        if(currentPlayer>=this.board.length){
+            currentPlayer=0;
+        }
+    }
+
+    public int gameOver(){
+        for(int i=0; i < this.board.length;i++){
+            if(this.board[i]==0){
+                return i;
+            }
+        }
+        return -1;
+    }
 }
