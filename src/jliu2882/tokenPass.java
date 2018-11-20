@@ -25,8 +25,9 @@ public class tokenPass {
     public String toString(){
         String result ="";
         for(int i = 1; i<=this.board.length; i++) {
-            result+= "Player " + i + " has " + this.board[i-1] + " tokens \n";
+            result+= "Player " + i + " : " + this.board[i-1] + " tokens. ";
         }
+        result+= "\n Current Player: " + this.currentPlayer;
         return result;
     }
 
